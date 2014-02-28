@@ -1,0 +1,6 @@
+;; -*- emacs-lisp -*- <13/12/30 17:10:54 c:/Users/d.choy/.emacs.d/tramp>
+;; Tramp connection history.  Don't change this file.
+;; You can delete it, forcing Tramp to reapply the checks.
+
+((["sudo" "root" "localhost" nil nil]
+  nil))
