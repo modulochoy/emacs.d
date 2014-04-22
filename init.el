@@ -138,3 +138,5 @@ point."
 (autoload 'ack "full-ack" nil t)
 (autoload 'ack-find-same-file "full-ack" nil t)
 (autoload 'ack-find-file "full-ack" nil t)
+
+(setq backup-directory-alist '(("." . "~/.emacs_backups")))
