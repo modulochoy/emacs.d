@@ -123,8 +123,8 @@ point."
 
 (defun custom-color-org-theme ()
   (interactive)
-  (color-theme-gnome2))
-;;  (color-theme-buffer-local 'color-theme-aalto-dark (current-buffer)))
+ ;; (color-theme-euphoria))
+  (color-theme-buffer-local 'color-theme-pok-wog (current-buffer)))
 
 (defun custom-color-code-theme ()
   (interactive)
