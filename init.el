@@ -90,8 +90,7 @@ point."
  '(inhibit-startup-screen t)
  '(tool-bar-mode nil)
  '(transient-mark-mode (quote (only . t))))
-(custom-set-faces
- )
+(custom-set-faces)
 (put 'erase-buffer 'disabled nil)
 
 (global-set-key (kbd "\C-x <down>") 'custom-shrink-window)
