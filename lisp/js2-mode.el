@@ -1051,12 +1051,12 @@ in large files.")
   :group 'js2-mode)
 
 (defface js2-jsdoc-tag
-  '((t :foreground "SlateGray"))
+  '((t :foreground "gray"))
   "Face used to highlight @whatever tags in jsdoc comments."
   :group 'js2-mode)
 
 (defface js2-jsdoc-type
-  '((t :foreground "SteelBlue"))
+  '((t :foreground "SkyBlue"))
   "Face used to highlight {FooBar} types in jsdoc comments."
   :group 'js2-mode)
 
@@ -1066,12 +1066,12 @@ in large files.")
   :group 'js2-mode)
 
 (defface js2-function-param
-  '((t :foreground "SeaGreen"))
+  '((t :foreground "LemonChiffon"))
   "Face used to highlight function parameters in javascript."
   :group 'js2-mode)
 
 (defface js2-instance-member
-  '((t :foreground "DarkOrchid"))
+  '((t :foreground "orchid"))
   "Face used to highlight instance variables in javascript.
 Not currently used."
   :group 'js2-mode)
@@ -1100,7 +1100,7 @@ Not currently used."
 
 (defface js2-jsdoc-html-tag-delimiter
   '((((class color) (min-colors 88) (background light))
-     (:foreground "dark khaki"))
+     (:foreground "khaki"))
     (((class color) (min-colors 8) (background dark))
      (:foreground "green"))
     (((class color) (min-colors 8) (background light))
@@ -9454,7 +9454,7 @@ not `js2-NAME', then we use the token info saved in instance vars."
 
 ;;; Indentation support
 
-;; This indenter is based on Karl LandstrC6m's "javascript.el" indenter.
+;; This indenter is based on Karl Landström's "javascript.el" indenter.
 ;; Karl cleverly deduces that the desired indentation level is often a
 ;; function of paren/bracket/brace nesting depth, which can be determined
 ;; quickly via the built-in `parse-partial-sexp' function.  His indenter

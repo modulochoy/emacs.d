@@ -75,6 +75,11 @@ point."
 (show-paren-mode 1) ; turn on paren match highlighting
 (setq show-paren-style 'expression) ; highlight entire bracket expression
 
+;; android-mode
+(add-to-list 'load-path "~/.emacs.d/lisp/android-mode")
+(require 'android-mode)
+(setq android-mode-sdk-dir "~/dev/adt/sdk")
+
 (require 'js-comint)
 (setq inferior-js-program-command "rhino")
 (add-hook 'js2-mode-hook '(lambda () 
