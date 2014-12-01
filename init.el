@@ -150,3 +150,5 @@ point."
 (autoload 'ack-find-file "full-ack" nil t)
 
 (setq backup-directory-alist '(("." . "~/.emacs_backups")))
+
+(global-set-key (kbd "\C-c b") 'helm-buffers-list)
