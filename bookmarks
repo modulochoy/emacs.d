@@ -1,0 +1,30 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("dev-scratch"
+ (filename . "~/dev/scratch/")
+ (front-context-string)
+ (rear-context-string . "Jan  6 12:32 ..\n")
+ (position . 171))
+("sfu-2014-spring"
+ (filename . "~/Documents/school/sfu2.0/2014spring/")
+ (front-context-string)
+ (rear-context-string . "96 Jan  4 14:37 ")
+ (position . 243))
+("website-yilun"
+ (filename . "~/dev/websites/yilun_realty/")
+ (front-context-string . "archive\n  drwx--")
+ (rear-context-string . "96 Jan  4 14:33 ")
+ (position . 234))
+("android-ui-crawler"
+ (filename . "~/dev/blacktusk/android-ui-crawler/")
+ (front-context-string . ".git\n  drwx-----")
+ (rear-context-string . "96 Jan  4 14:33 ")
+ (position . 238))
+("dchoy-notes"
+ (filename . "~/dchoy-notes/dchoy_notes.org")
+ (front-context-string . "* emacs\n** bookm")
+ (rear-context-string)
+ (position . 1))
+)

@@ -152,3 +152,12 @@ point."
 (setq backup-directory-alist '(("." . "~/.emacs_backups")))
 
 (global-set-key (kbd "\C-c b") 'helm-buffers-list)
+
+(setq bookmark-save-flag 1)
+
+(defadvice bookmark-jump (after bookmark-jump activate)
+  (let ((latest (bookmark-get-bookmark bookmark)))
+    (setq bookmark-alist (delq latest bookmark-alist))
+    (add-to-list 'bookmark-alist latest)))
+
+(global-set-key (kbd "C-x p") 'previous-multiframe-window)
