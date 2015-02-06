@@ -46,11 +46,14 @@ point."
    (define-key comint-mode-map (kbd "M-p") 'comint-previous-matching-input-from-input)))
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
-(autoload 'js2-mode "js2-mode.el" nil t)
 (autoload 'batch-mode "batch-mode.el" nil t)
 (add-to-list 'auto-mode-alist '("\\.bat$" . batch-mode))
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.m$" . octave-mode))
+
+(add-hook 'js-mode-hook 'js2-minor-mode)
+(add-hook 'js2-mode-hook 'ac-js2-mode)
+
+(setq js2-highlight-level 3)
 
 (add-hook 'eshell-mode-hook (lambda ()
 			      (custom-color-shell-theme)))
@@ -86,16 +89,11 @@ point."
 (require 'android-mode)
 (setq android-mode-sdk-dir "~/dev/adt/sdk")
 
-(require 'js-comint)
-(setq inferior-js-program-command "rhino")
-(add-hook 'js2-mode-hook '(lambda () 
-			    (local-set-key "\C-x\C-e" 'js-send-last-sexp)
-			    (local-set-key "\C-\M-x" 'js-send-last-sexp-and-go)
-			    (local-set-key "\C-cb" 'js-send-buffer)
-			    (local-set-key "\C-c\C-b" 'js-send-buffer-and-go)
-			    (local-set-key "\C-cl" 'js-load-file-and-go)
-			    (custom-color-code-theme)
-			    ))
+(autoload 'moz-minor-mode "moz" "Mozilla Minor and Inferior Mozilla Modes" t)
+
+(add-hook 'javascript-mode-hook 'javascript-custom-setup)
+(defun javascript-custom-setup ()
+  (moz-minor-mode 1))
 
 (custom-set-variables
  '(inhibit-startup-screen t)
@@ -154,5 +152,7 @@ point."
 (global-set-key (kbd "\C-c b") 'helm-buffers-list)
 
 (setq bookmark-save-flag 1)
+(desktop-save-mode 1)
 
 (global-set-key (kbd "C-x p") 'previous-multiframe-window)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
